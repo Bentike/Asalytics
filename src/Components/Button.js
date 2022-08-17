@@ -1,9 +1,9 @@
 import React from 'react';
 import './Styles/button.css';
 
-function Button() {
+function Button({testid}) {
   return (
-    <div>
+    <div data-testid={testid}>
         <button className='header__btn'>ANALYZE ASAs</button>
     </div>
   )

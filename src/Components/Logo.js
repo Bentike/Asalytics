@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './assets/Header_Logo.png';
 
-function Logo() {
+function Logo({testid}) {
   return (
-    <div>
+    <div data-testid={testid}>
         <img src={logo} alt="logo"/>
     </div>
   )

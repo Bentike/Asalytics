@@ -6,8 +6,8 @@ import './Styles/header.css';
 function Header({testid}) {
   return (
     <div data-testid={testid} className='header__wrapper'>
-        <Logo/>
-        <Button/>
+        <Logo testid='logo'/>
+        <Button testid='btn'/>
     </div>
   )
 }
