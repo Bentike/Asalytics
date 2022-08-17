@@ -1,18 +1,16 @@
 import React from 'react';
-import algo from './assets/algo-icon.png';
 import './Styles/algorandCard.css';
 
-
-function AlgorandCard({isAavailable}) {
+function AlgorandCard({logo, name, available}) {
   return (
     <div className='card__item'>
-        <img src={algo} alt='algorand icon'/>
-        <h4>Algorand</h4>
+        <img src={logo} alt='algorand icon'/>
+        <h4>{name}</h4>
         <p 
-           className={isAavailable ? 
+           className={available ? 
            "status__text available" : 
            "status__text unavailable"}>
-           {isAavailable ? "Available" : "Unavailable"}
+           {available ? "Available" : "Unavailable"}
         </p>
     </div>
   )
