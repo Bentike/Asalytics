@@ -9,9 +9,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
         <div className="App">
-          <Header/>
+          <Header testid='header'/>
           <h1 className='header__text'>List of Algorand Standard Assets <br/> on ASAlytics</h1>
-          <Algorand/>
+          <Algorand testid='algorand'/>
         </div>
     </QueryClientProvider>
   );

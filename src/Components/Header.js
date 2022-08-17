@@ -3,9 +3,9 @@ import Button from './Button';
 import Logo from './Logo';
 import './Styles/header.css';
 
-function Header() {
+function Header({testid}) {
   return (
-    <div className='header__wrapper'>
+    <div data-testid={testid} className='header__wrapper'>
         <Logo/>
         <Button/>
     </div>

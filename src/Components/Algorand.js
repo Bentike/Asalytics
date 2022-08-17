@@ -25,14 +25,14 @@ const fetchAlgorandData = () => {
  } 
  
 
-function Algorand() {
+function Algorand({testid}) {
   const {isLoading, error, data} = useQuery("ASAs", fetchAlgorandData);
 
   let items = data?.data?.asalist?.result; 
   
   if (isLoading) {
     return (
-    <div className='loading'>
+    <div className='loading' data-testid={testid}>
        <img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921' alt="loading"/>
     </div>
     )
@@ -40,14 +40,14 @@ function Algorand() {
  
   if (error){
     return(
-      <div>
+      <div data-testid={testid}>
          <h2>Error fetching data</h2>
       </div>
     )
   }
 
   return (
-    <div className='algorand'>
+    <div className='algorand' data-testid={testid}>
       {items.map(algo => {
         return <AlgorandCard
                   key={algo.name}
