@@ -5,11 +5,12 @@ function AlgorandCard({logo, name, available}) {
   return (
     <div className='card__item'>
         <img src={logo} alt='algorand icon'/>
-        <h4>{name}</h4>
+        <h4 title='algo'>{name}</h4>
         <p 
            className={available ? 
            "status__text available" : 
-           "status__text unavailable"}>
+           "status__text unavailable"}
+           title='status'>
            {available ? "Available" : "Unavailable"}
         </p>
     </div>
